@@ -3,7 +3,6 @@ import { useRouter } from "next/router";
 export async function getStaticPaths() {
     const res = await fetch(`http://0.0.0.0:3000/api/getBakeryItems`);
     const data: any = await res.json();
-    console.log("this is data : ", data);
 
     const paths = data.map((item: any) => {
         return {
