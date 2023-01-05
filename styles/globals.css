@@ -9,6 +9,11 @@
   box-sizing: border-box;
 }
 
+::selection {
+  color: #f2f2f2;
+  background: #C58940;
+}
+
 body {
   background: #f2f2f2;
   color: #333;
@@ -24,16 +29,6 @@ a {
   max-width: 960px;
   margin: 0 auto;
   padding: 20px;
-  min-height: 100vh;
-  position: relative;
-}
-
-Footer {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-
 }
 
 nav {

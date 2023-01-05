@@ -1,7 +1,7 @@
 const Footer = () => {
     return (
         <footer>
-            <p>Copyright © 2023 | All Rights Reserved</p>
+            <p className="text-sm md:text-base lg:text-lg">Copyright © 2023 | All Rights Reserved</p>
         </footer>
     );
 }
