@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
-import Items from '../../json/BakeryItems.json';
+import * as Items from '../../json/BakeryItems.json';
 
 export type BakeryItemType = {
     id: number,
