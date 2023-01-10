@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
-import Bakery_items from '../../json/BakeryItems.json';
+import { data } from '../../data/BakeryItems';
 
 export type BakeryItemType = {
     id: number,
@@ -9,7 +9,6 @@ export type BakeryItemType = {
     description: string
 }
 
-export default function getBakeryItems(req: NextApiRequest, res: NextApiResponse<BakeryItemType[]>) {
-    console.log(Bakery_items)
-    res.status(200).json(Bakery_items["Bakery_items"]);  
+export default async function getBakeryItems(req: NextApiRequest, res: NextApiResponse<BakeryItemType[]>) {    
+    res.status(200).json(data["Bakery_items"]);  
 }

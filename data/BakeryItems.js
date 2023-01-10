@@ -1,4 +1,4 @@
-{
+export const data = {
   "Bakery_items": [
     {
       "id": 1,
