@@ -7,14 +7,17 @@ const ErrorPage = () => {
     const [time, setTime] = useState(5);
 
     useEffect(() => {
-        console.log(("onMount"));
         setInterval(() => {
             setTime(time => time-1);
         }, 1000);
 
-        setTimeout(() => {
+        const timeout = setTimeout(() => {
             router.push("/");
         }, 5000)
+
+        return () => {
+            clearTimeout(timeout);
+        };
     }, [])
 
     return (
