@@ -1,7 +1,9 @@
 import Link from 'next/link'
 
+const server = process.env.SERVER
+
 export async function getStaticProps() {
-    const res = await fetch(`http://0.0.0.0:3000/api/getBakeryItems`); 
+    const res = await fetch(`${server}/api/getBakeryItems`); 
     const data = await res.json()
 
     return {

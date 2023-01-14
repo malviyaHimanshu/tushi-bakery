@@ -1,7 +1,9 @@
 import { useRouter } from "next/router";
 
+const server = process.env.SERVER
+
 export async function getStaticPaths() {
-    const res = await fetch(`http://0.0.0.0:3000/api/getBakeryItems`);
+    const res = await fetch(`${server}/api/getBakeryItems`);
     const data: any = await res.json();
 
     const paths = data.map((item: any) => {
@@ -18,7 +20,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps(context: any) {
     const id = context.params.id;
-    const res = await fetch(`http://0.0.0.0:3000/api/getItemByID?id=${id}`);
+    const res = await fetch(`${server}/api/getItemByID?id=${id}`);
     const data: any = await res.json();
 
     return {
